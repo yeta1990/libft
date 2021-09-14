@@ -1,6 +1,4 @@
-SRCS	= 	srcs/ft_isalpha.c srcs/ft_isdigit.c srcs/ft_isalnum.c srcs/ft_isascii.c srcs/ft_isprint.c srcs/ft_strlen.c srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c
-
-INCS	= inc/libft.h
+SRCS	= 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c 
 
 CC		= gcc
 
@@ -12,10 +10,11 @@ NAME	= libft.a
 
 RM		= rm -f
 
-.c.o:		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INCS)
+%.o:%.c
+		$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
-			ar rc libft.a $(OBJS)
+	ar rc $(NAME) $?
 
 all:		$(NAME)
 
