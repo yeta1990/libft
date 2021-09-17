@@ -6,7 +6,7 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 01:30:42 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/17 01:56:11 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/17 09:57:10 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*s3;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s3 = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!s3)
 		return (NULL);
