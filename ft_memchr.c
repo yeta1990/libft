@@ -6,7 +6,7 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 03:39:49 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/16 03:49:08 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/17 10:56:14 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (c == str[i])
-			return (str + i);
+			return ((void *)(s + i));
 		i++;
 	}
 	return (0);
