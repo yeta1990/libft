@@ -6,7 +6,7 @@
 /*   By: albgarci <albgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:03:40 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/18 17:15:05 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/18 21:29:10 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char **ft_split(char const *str, char c)
 	i = 0;
 	words = 0;
 	in_word = 1;
+	if (!str)
+		return (0);
 /*	if (c == '\0')
 	{
 	//	p = 0;

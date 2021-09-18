@@ -6,7 +6,7 @@
 /*   By: albgarci <albgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 19:46:51 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/17 12:54:07 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/18 21:41:02 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= ft_strlen(s))
 	{
 		s2 = malloc(1);
+		if (!s2)
+			return (0);
 		s2[0] = '\0';
 		return (s2);
 	}
