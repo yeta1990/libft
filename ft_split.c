@@ -6,60 +6,39 @@
 /*   By: albgarci <albgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 17:03:40 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/18 21:29:10 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/19 03:42:22 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
-#include <string.h>
 
 void	assign_mem(char **p, char *str, char c);
 char	**copy_words(char **p, char *str, char c);
-//char	**copy_str(char *str);
 
-char **ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	int		i;
 	int		words;
-	int		in_word;
 	char	**p;
 
 	i = 0;
 	words = 0;
-	in_word = 1;
-	if (!str)
-		return (0);
-/*	if (c == '\0')
+	if (str == 0)
 	{
-	//	p = 0;
-		p = malloc(sizeof(char *) * 2);
-		if (!p)
-			return (0);
-		p[0] = ft_strdup(str);
-		p[1] = 0;
+		p = malloc(sizeof(char *));
+		p[0] = 0;
+		return (p);
 	}
-*/	
-/*	while (str[i] == c)
+	while (str[i])
+	{
+		if (c != str[i] && !i)
+			words++;
+		else if (c != str[i] && c == str[i - 1])
+			words++;
 		i++;
-	if ((size_t) i == ft_strlen(str))
-		return (0);
-	else
-		i = 0;
-*/	while (str[i++])
-	{
-		if (c != str[i] && str[i + 1] == 0)
-			words++;
-		else if (c != str[i])
-			in_word = 1;
-		else if (c == str[i] && (in_word))
-		{
-			in_word = 0;
-			words++;
-		}
 	}
-	if (!(p = malloc(sizeof(char *) * (words + 1))))
+	p = malloc(sizeof(char *) * (words + 1));
+	if (!(p))
 		return (0);
 	assign_mem(p, (char *)str, c);
 	return (copy_words(p, (char *)str, c));
@@ -77,7 +56,7 @@ void	assign_mem(char **p, char *str, char c)
 	while (str[++i])
 	{
 		if (c != str[i] && str[i + 1] == 0)
-			p[words++] = malloc(sizeof(char) * (size + 1));
+			p[words++] = malloc(sizeof(char) * (size + 2));
 		else if (c != str[i])
 			size++;
 		else if (c == str[i] && size > 0)
@@ -100,7 +79,7 @@ char	**copy_words(char **p, char *str, char c)
 	word = 0;
 	while (str[++i])
 	{
-		if (c != str[i] && str[i + 1] == 0 && j == 0)
+		if (c != str[i] && str[i + 1] == 0)
 		{	
 			p[word][j] = str[i];
 			p[word][j + 1] = '\0';
