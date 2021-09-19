@@ -6,7 +6,7 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 13:18:07 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/19 13:43:40 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/20 01:02:17 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *aux;
+	t_list	*aux;
 
 	if (!*lst)
 	{

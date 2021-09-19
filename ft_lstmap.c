@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 12:45:21 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/20 01:03:10 by albgarci         ###   ########.fr       */
+/*   Created: 2021/09/19 15:13:15 by albgarci          #+#    #+#             */
+/*   Updated: 2021/09/20 00:57:40 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*element;
+	t_list	*new_list;
+	t_list	*item;
 
-	element = malloc(sizeof(t_list));
-	if (!element)
-		return (NULL);
-	element->content = content;
-	element->next = NULL;
-	return (element);
+	if (!lst)
+		return (0);
+	item = 0;
+	new_list = item;
+	while (lst)
+	{
+		item = ft_lstnew(f(lst->content));
+		if (!item)
+		{
+			ft_lstclear(&new_list, del);
+			return (0);
+		}
+		lst = lst->next;
+		ft_lstadd_back(&new_list, item);
+	}
+	return (new_list);
 }
