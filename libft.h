@@ -6,7 +6,7 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 00:59:50 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/20 10:33:20 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/20 12:35:07 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
