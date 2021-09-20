@@ -6,7 +6,7 @@
 /*   By: albgarci <albgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 10:18:26 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/20 01:15:39 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/20 13:37:36 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 
 	i = 0;
+	if (!s1 || !set)
+		return (0);
 	j = ft_strlen(s1);
-	if (!s1)
-		return (NULL);
 	if (!set)
-		return (ft_strdup(s1));
+	{
+		s = ft_strdup(s1);
+		if (!s)
+			return (0);
+		return (s);
+	}
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (j > i && ft_strrchr(set, s1[j]))
