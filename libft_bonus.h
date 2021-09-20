@@ -6,12 +6,12 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 00:59:50 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/20 10:31:42 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/20 13:13:12 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
 # include <stdlib.h>
 # include <unistd.h>
