@@ -6,7 +6,7 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 00:59:50 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/21 10:47:32 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/21 11:42:59 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "libft_bonus.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
