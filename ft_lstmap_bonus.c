@@ -6,11 +6,11 @@
 /*   By: albgarci </var/spool/mail/albgarci>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 15:13:15 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/20 10:35:16 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/22 11:55:50 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
