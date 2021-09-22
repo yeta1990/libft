@@ -6,12 +6,11 @@
 /*   By: albgarci <albgarci@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 21:04:01 by albgarci          #+#    #+#             */
-/*   Updated: 2021/09/18 21:14:43 by albgarci         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:29:31 by albgarci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 static void	recursive_printer(int n, int fd);
 
