@@ -22,7 +22,7 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
-bonus:		$(BONUS_SRCS) $(BONUS_OBJS)
+bonus:		$(BONUS_OBJS)
 			ar rc $(NAME) $?
 
 clean:
